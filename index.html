@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Change Background Color</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+</head>
+<body style="padding: 20px">
+    <div class="container text-center d-flex justify-content-center align-items-center flex-column" style="height: 100vh">
+<h1 class="display-3 text-center mb-4" id="title">Change the Background Color</h1>
+<button class="btn btn-danger mt-4 mb-2">Change the Background Color</button>
+</div>
+<script>
+    var colorStrip = ['red', 'orange', 'green', 'grey', 'blue', 'brown', 'purple', 'yellow', 'white', 'gold', 'silver']
+
+    var button=document.querySelector("button");
+    var body=document.querySelector("body");
+    
+    button.addEventListener('click', changeBgColor)
+
+    function changeBgColor(){
+
+        colorIndex = Math.floor(Math.random()*colorStrip.length)
+        body.style.backgroundColor = colorStrip[colorIndex]
+        
+    }    
+</script>
+</body>
+</html>
