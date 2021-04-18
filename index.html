@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Change Background Color</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <meta charset="UTF-8">    
+    <title>Javascript: Tab System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@700;800;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">    
+  
+    <!-- Custom CSS Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body style="padding: 20px">
-    <div class="container text-center d-flex justify-content-center align-items-center flex-column" style="height: 100vh">
-<h1 class="display-3 text-center mb-4" id="title">Change the Background Color</h1>
-<button class="btn btn-danger mt-4 mb-2">Change the Background Color</button>
+<body>
+  <div style="height: 100vh" class="d-flex mt-4 justify-content-center align-items-center">
+  <div class="container text-center">
+    <h1 class="display-3 text-danger mt-4">Change Background Color</h1>    
+    <p class="lead text-center mb-4">Click the below Buttons and Change Body Background Color 🙂!</p>
+
+    <p class="mt-5 result">Current Body Background Color is : <strong class="reult"> #FFFFFF</strong></p>
+    <br>
+
+    <button class="btn btn-danger btn-fixed-color">Fixed Colors</button>
+
+    <button class="btn btn-danger btn-hex-color">Hex Color</button>
+
+    <button class="btn btn-danger btn-rgb-color">RGB Color</button>
+
+    <select class="form-control selectColor">
+      <option selected>Select</option>      
+    </select>
+
+  </div>  
 </div>
-<script>
-    var colorStrip = ['red', 'orange', 'green', 'grey', 'blue', 'brown', 'purple', 'yellow', 'white', 'gold', 'silver']
-
-    var button=document.querySelector("button");
-    var body=document.querySelector("body");
-    
-    button.addEventListener('click', changeBgColor)
-
-    function changeBgColor(){
-
-        colorIndex = Math.floor(Math.random()*colorStrip.length)
-        body.style.backgroundColor = colorStrip[colorIndex]
-        
-    }    
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
